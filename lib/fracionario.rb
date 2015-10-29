@@ -1,16 +1,26 @@
 class Fracionario
-  attr_reader :n, :d
+  attr_reader :num, :den
   def initialize(n, d)
-    @n, @d = n, d
+    @num = n
+    @den = d
   end
   def to_s
-    "#{@n}/#{@d}"
-  end
-  def *(value)
-    Fracionario.new(@n * value, @d)
+    "#{@num}/#{@den}"
   end
   def -@
-    Fracionario.new(@n * -1, @d)
+    Fracionario.new(@num * -1, @den)
+  end
+  def +(other)
+    Fracionario.new( ( @num * other.den + other.num * @den ) , ( @den * other.den ) )
+  end
+  def -(other)
+    Fracionario.new( ( @num * other.den - other.num * @den ) , ( @den * other.den ) )
+  end
+  def *(other)
+    Fracionario.new( ( @num * other.num ) , ( @den * other.den ) )
+  end
+  def /(other)
+    Fracionario.new( ( @num * other.den ) , ( @den * other.num ) )
   end
   
 end
