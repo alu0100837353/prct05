@@ -18,7 +18,7 @@ class TestFracionario < Test::Unit::TestCase
   end
   
   def test_producto
-    assert_equal("5/5", (@unidad*5).to_s)
+    assert_equal("5/1", (@unidad*5).to_s)
   end
   
   def test_opuesto
