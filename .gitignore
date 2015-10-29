@@ -1,0 +1,8 @@
+#ignora ficheros acabados en ~
+*~.*
+#ignora ficheros con extensión .o
+*.o
+#ignora ficheros con extensión .class
+*.class
+#ignora ficheros con extensión .tgz
+*.tgz
